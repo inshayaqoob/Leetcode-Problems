@@ -1,0 +1,17 @@
+class Solution:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        # Function to perform in-order traversal and store values in res
+        def inorder_traversal(node, res):
+            if node is None:
+                return
+            inorder_traversal(node.left, res)
+            res.append(node.val)
+            inorder_traversal(node.right, res)
+
+        # Initialize an empty list to store values
+        res = []
+        # Perform in-order traversal starting from the root
+        inorder_traversal(root, res)
+
+        # Return the kth smallest value
+        return res[k - 1]
