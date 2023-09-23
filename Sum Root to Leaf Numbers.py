@@ -17,3 +17,4 @@ class Solution:
             return left_sum + right_sum
 
         return dfs(root, 0)
+    
