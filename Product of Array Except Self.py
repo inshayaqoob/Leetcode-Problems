@@ -10,3 +10,6 @@ class Solution:
             sol[length-i-1] *= post
             post = post*nums[length-i-1]
         return(sol)
+    
+
+    
